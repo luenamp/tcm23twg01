@@ -1,5 +1,5 @@
 Tehnews
-Repositório para projeto da cadeira de Tecnologias Web, da Universidade da Maia. Desenvolvido por @Beatriz, @Ritanunes7 e @Luenamp.
+Repositório para projeto da cadeira de Tecnologias Web, da Universidade da Maia. Desenvolvido por @Beatriz043545, @Ritanunes7 e @luenamp.
 
 Descrição
 O site aborda uma temática de várias notícias sobre tecnologias.
@@ -19,6 +19,6 @@ Presentation
 Chapter 4: Presentation
 
 Grupo
-Beatriz
+Beatriz @Beatriz043545
 Rita @Ritanunes7
-Luena  @MarcoOliveira
+Luena @luenamp
