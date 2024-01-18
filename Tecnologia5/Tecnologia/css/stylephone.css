@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    color: black;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://assets-global.website-files.com/60abc49f862371f53ca0971d/60ae4e020780f50013618b90_RMC%20Branco%20Nevada.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    background-color: #0a451f;
+    text-align: center;
+    padding: 20px;
+}
+
+header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+nav {
+    background-color: #13612e;
+    overflow: hidden;
+}
+
+nav a {
+    display: block;
+    color: whitesmoke;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.news-item {
+    width: 100%; 
+    margin: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+@media only screen and (min-width: 600px) {
+    .news-item {
+        width: 48%; 
+    }
+}
+
+.news-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.news-item-content {
+    padding: 15px;
+}
+
+.footer {
+    background-color: #13612e;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-col {
+    width: 100%; 
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+@media only screen and (min-width: 600px) {
+    .footer-col {
+        width: 50%; 
+    }
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.marcas-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.marcas-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<samsungGalaxy xmlns="http://www.samsungGalaxy.org"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.samsungGalaxy.org xsd.xsd">
+
+  <caption>Em resumo:</caption>
+  <telemóveis>
+    <telemóvel>
+      <modelo>Galaxy S24</modelo>
+      <caraterísticas>
+        <opção>
+          <armazenamento unidade="GB">128</armazenamento>
+          <preço unidade="Euro">899</preço>
+        </opção>
+        <opção>
+          <armazenamento unidade="GB">256</armazenamento>
+          <preço unidade="Euro">959</preço>
+        </opção>
+      </caraterísticas>
+    </telemóvel>
+    <telemóvel>
+      <modelo>Galaxy S24+</modelo>
+      <caraterísticas>
+        <opção>
+          <armazenamento unidade="GB">256</armazenamento>
+          <preço unidade="Euro">1149</preço>
+        </opção>
+        <opção>
+          <armazenamento unidade="GB">512</armazenamento>
+          <preço unidade="Euro">1269</preço>
+        </opção>
+      </caraterísticas>
+    </telemóvel>
+    <telemóvel>
+      <modelo>Galaxy S24 Ultra</modelo>
+      <caraterísticas>
+        <opção>
+          <armazenamento unidade="GB">256</armazenamento>
+          <preço unidade="Euro">1149</preço>
+        </opção>
+        <opção>
+          <armazenamento unidade="GB">512</armazenamento>
+          <preço unidade="Euro">1569</preço>
+        </opção>
+        <opção>
+          <armazenamento unidade="TB">1</armazenamento>
+          <preço unidade="Euro">1809</preço>
+        </opção>
+      </caraterísticas>
+    </telemóvel>
+  </telemóveis>
+
+</samsungGalaxy>
