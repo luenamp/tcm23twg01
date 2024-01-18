@@ -1,4 +1,4 @@
-Tehnews
+Technews
 Repositório para projeto da cadeira de Tecnologias Web, da Universidade da Maia. Desenvolvido por @Beatriz043545, @Ritanunes7 e @luenamp.
 
 Descrição
