@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preços dos Samsung Galaxy S24 na Europa podem trazer uma agradável surpresa</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" media="screen and (max-width: 900px)" href="css/stylephone.css" type="text/css">
+</head>
+
+<body>
+
+    <header>
+        <img src="img/logo.png" alt="Logo">
+
+        <nav>
+            <a href="pagina4.html">Comunicação</a>
+            <a href="pagina3.html">Emprego</a>
+            <a href="pagina2.html">Novidades</a>
+            <a href="index.html">Página Principal</a>
+        </nav>
+    </header>
+    <article>
+        <h1>Segundo alguns rumores que têm surgido, estamos a poucos dias de conhecer os Galaxy S24, os novos
+            smartphones da
+            Samsung. Estes vão seguir os desenvolvimentos da marca, como aconteceu nos anos anteriores, mas desta vez há
+            uma
+            mudança importante. Os preços dos Samsung Galaxy S24 na Europa foram conhecidos e podem trazer uma agradável
+            surpresa.</h1>
+        <img src="img/noticia6.jpg" alt="noticia6">
+        <p>Ao longo dos últimos anos assistimos a um aumento desmesurado dos preços dos smartphones. Independentemente
+            da
+            marca e até da gama onde se inserem, estes preços têm crescido e atingido valores que muitos consideram
+            obscenos
+            e dificilmente justificáveis para o que obtemos.
+            Felizmente esse cenário mudará aparentemente e os últimos lançamentos mostraram um abrandamento do aumento
+            dos
+            preços e até casos em que estes baixaram. Esse cenário foi agora associado aos novos Galaxy S24 da Samsung,
+            segundo uma informação disponibilizada por uma fonte muito credível. Do que foi mostrado, os preços dos
+            novos
+            smartphones da Samsung para a Europa vão baixar e ficar assim um pouco mais acessíveis para os consumidores.
+            As
+            informações mostram que o preço recomendado do Galaxy S24 e S24+ pode ser um pouco inferior ao do S23 e S23+
+            no
+            lançamento.<br>
+
+            O Galaxy S24 com 128 GB de armazenamento terá um preços a partir de 899 euros, enquanto o valor de 959 euros
+            será associado ao modelo de 256 GB. O Galaxy S24+ com 256GB custará a partir de 1149€, a variante com 512GB
+            custará 1269€. No ano passado o S23 128GB tinha um preço sugerido de 949€, enquanto o S24+ estava disponível
+            a
+            partir de 1199€.
+            Com o Ultra teremos um caminho oposto. O Galaxy S24 Ultra com 256GB custará 1449€. O preço de venda
+            recomendado
+            do S23 Ultra com 256GB era de 1399€ no início de 2023. Destaca-se que o S24 Ultra deste ano terá 12 GB de
+            RAM e
+            o S23 Ultra com 256 GB tem 8 GB de RAM. Pelo S24 Ultra com 512GB pagará 1569€. O S23 Ultra com 512GB custava
+            1.579€ no início de 2023. Com a mesma quantidade de RAM, os modelos têm aproximadamente o mesmo preço.</p>
+            
+            <table>
+                <caption>Em resumo:</caption>
+                <thead>
+                  <tr>
+                    <th>Modelo</th>
+                    <th>Armazenamento (GB)</th>
+                    <th>Preço (Euro)</th>
+                  </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+              </table>
+              
+              <script>
+                const xmlString = `<?xml version="1.0" encoding="UTF-8"?>
+                <samsungGalaxy>
+                  <caption>Em resumo:</caption>
+                  <telemóveis>
+                    <telemóvel>
+                      <modelo>Galaxy S24</modelo>
+                      <caraterísticas>
+                        <opção>
+                          <armazenamento unidade="GB">128</armazenamento>
+                          <preço unidade="Euro">899</preço>
+                        </opção>
+                        <opção>
+                          <armazenamento unidade="GB">256</armazenamento>
+                          <preço unidade="Euro">959</preço>
+                        </opção>
+                      </caraterísticas>
+                    </telemóvel>
+                    <telemóvel>
+                      <modelo>Galaxy S24+</modelo>
+                      <caraterísticas>
+                        <opção>
+                          <armazenamento unidade="GB">256</armazenamento>
+                          <preço unidade="Euro">1149</preço>
+                        </opção>
+                        <opção>
+                          <armazenamento unidade="GB">512</armazenamento>
+                          <preço unidade="Euro">1269</preço>
+                        </opção>
+                      </caraterísticas>
+                    </telemóvel>
+                    <telemóvel>
+                      <modelo>Galaxy S24 Ultra</modelo>
+                      <caraterísticas>
+                        <opção>
+                          <armazenamento unidade="GB">256</armazenamento>
+                          <preço unidade="Euro">1149</preço>
+                        </opção>
+                        <opção>
+                          <armazenamento unidade="GB">512</armazenamento>
+                          <preço unidade="Euro">1569</preço>
+                        </opção>
+                        <opção>
+                          <armazenamento unidade="TB">1</armazenamento>
+                          <preço unidade="Euro">1809</preço>
+                        </opção>
+                      </caraterísticas>
+                    </telemóvel>
+                  </telemóveis>
+                </samsungGalaxy>`;
+              
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xmlString, "text/xml");
+                const telemovels = xmlDoc.querySelectorAll("telemóvel");
+                const tableBody = document.getElementById("tableBody");
+              
+                telemovels.forEach(telemovel => {
+                  const modelo = telemovel.querySelector("modelo").textContent;
+                  const armazenamentos = telemovel.querySelectorAll("armazenamento");
+                  const preços = telemovel.querySelectorAll("preço");
+              
+                  armazenamentos.forEach((armazenamento, index) => {
+                    const row = document.createElement("tr");
+                    if (index === 0) {
+                      row.innerHTML = `<td rowspan="${armazenamentos.length}">${modelo}</td><td>${armazenamento.textContent} ${armazenamento.getAttribute('unidade')}</td><td>${preços[index].textContent} ${preços[index].getAttribute('unidade')}</td>`;
+                    } else {
+                      row.innerHTML = `<td>${armazenamento.textContent} ${armazenamento.getAttribute('unidade')}</td><td>${preços[index].textContent} ${preços[index].getAttribute('unidade')}</td>`;
+                    }
+                    tableBody.appendChild(row);
+                  });
+                });
+              </script>
+    </article>
+    <a href="pagina2.html">Voltar a Novidades</a>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Secções</h4>
+                    <ul>
+                        <li><a href="pagina4.html">Comunicação</a></li>
+                        <li><a href="pagina3.html">Emprego</a></li>
+                        <li><a href="pagina2.html">Novidades</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Marcas de Grupo</h4>
+                    <div class="marcas-links">
+                        <ul>
+                            <li><a href="https://sicnoticias.pt/">Sic Notícias</a></li>
+                            <li><a href="https://www.tsf.pt/">TSF</a></li>
+                            <li><a href="https://www.sapo.pt/">Sapo</a></li>
+                            <li><a href="https://tek.sapo.pt/">TekSapo</a></li>
+                            <li><a href="https://vozdocampo.pt/">Voz do Campo</a></li>
+                            <li><a href="https://economiasp.com/">Economia SP</a></li>
+                            <li><a href="https://www.forbes.com/">Forbes</a></li>
+                            <li><a href="https://pt.euronews.com/">Euro News</a></li>
+                            <li><a href="https://jornaleconomico.pt/categoria/economia/">Jornal Económico</a></li>
+                            <li><a href="https://epocanegocios.globo.com/">Época Negócios</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

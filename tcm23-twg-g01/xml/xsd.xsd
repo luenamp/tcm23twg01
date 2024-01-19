@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.samsungGalaxy.org"
+xmlns:tns="http://www.samsungGalaxy.org"
+elementFormDefault="qualified"
+>
+<element name="samsungGalaxy">
+    <complexType>
+      <sequence>
+        <element name="caption" type="string" />
+        <element name="telemóveis">
+          <complexType>
+            <sequence>
+              <element name="telemóvel" maxOccurs="unbounded">
+                <complexType>
+                  <sequence>
+                    <element name="modelo" type="string" />
+                    <element name="caraterísticas">
+                      <complexType>
+                        <sequence>
+                          <element name="opção" maxOccurs="unbounded">
+                            <complexType>
+                              <sequence>
+                                <element name="armazenamento">
+                                  <complexType>
+                                    <simpleContent>
+                                      <extension base="string">
+                                        <attribute name="unidade" use="required" />
+                                      </extension>
+                                    </simpleContent>
+                                  </complexType>
+                                </element>
+                                <element name="preço">
+                                  <complexType>
+                                    <simpleContent>
+                                      <extension base="string">
+                                        <attribute name="unidade" use="required" fixed="Euro" />
+                                      </extension>
+                                    </simpleContent>
+                                  </complexType>
+                                </element>
+                              </sequence>
+                            </complexType>
+                          </element>
+                        </sequence>
+                      </complexType>
+                    </element>
+                  </sequence>
+                </complexType>
+              </element>
+            </sequence>
+          </complexType>
+        </element>
+      </sequence>
+    </complexType>
+  </element>
+</schema>
